@@ -57,7 +57,11 @@ until deck.length == 0
   command = gets.chomp
   if command == ''
     card = deck.pop
-    p request(card)
+    if deck.length == 0
+      p "And finally, the #{card} please"
+    else
+      p request(card)
+    end
   end
 end
 
